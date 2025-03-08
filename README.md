@@ -10,6 +10,7 @@
 ### Fork
 
 Fork repo through github
+
 Then clone the repo to your local computer to start work
 
 ### Clone the repo(alternative to forking)
@@ -19,12 +20,14 @@ git clone git@github.com:whoop-t/nice-shield-base.git your-repo-name
 The above will clone the base repo into a folder of your choice. This should match the repo name you are going to create on github
 
 2. Create new repo on github
+
 On you github, create a new repo with the same name as your folder you cloned too
 
 3. Set your locally cloned repo remote to the new repo you created on github
+
 You need to attach your local clone to the remote repo, do this by running the command below
 > [!NOTE]
-> You can get this but using the Code button on your repo on Github 
+> You can get the url by using the Code button on your repo on Github 
 ```
 git remote set-url origin git@github.com:YOUR-USER/your-repo-name.git
 ```
@@ -41,17 +44,7 @@ Now you should see all the base files in your repo on github
 
 After you have the code, you will need to rename some items to make sure it gets picked up as a module when it is used
 
-1. Rename files
-> [!IMPORTANT]
-> Files should be underscore
-
-- Rename `shields/nice_shield_base` to your repo name
-- Rename `shields/nice_shield_base/nice_shield_base.conf` to your repo name
-- Rename `shields/nice_shield_base/nice_shield_base.overlay` to your repo name
-- Rename `shields/nice_shield_base/nice_shield_base.zmk.yml` to your repo name
-
-
-2. Rename ids/variables in the code
+1. Rename ids/variables in the code
 
 In `Kconfig.shield`, update `nice_shield_base` to your shield
 This will be your repo name but with underscores
@@ -75,6 +68,15 @@ name: "zmk-shield-nice!view-your-repo"
 ```
 > [!NOTE]
 > I dont think this one matters, but I like to update it
+
+2. Rename files
+> [!IMPORTANT]
+> Files should be underscore
+
+- Rename `shields/nice_shield_base` to your repo name
+- Rename `shields/nice_shield_base/nice_shield_base.conf` to your repo name
+- Rename `shields/nice_shield_base/nice_shield_base.overlay` to your repo name
+- Rename `shields/nice_shield_base/nice_shield_base.zmk.yml` to your repo name
 
 ## Create 1-bit art
 
