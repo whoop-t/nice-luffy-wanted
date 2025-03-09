@@ -77,6 +77,9 @@ name: "zmk-shield-nice!view-your-repo"
 - Rename `shields/nice_shield_base/nice_shield_base.zmk.yml` to your repo name
 
 ## Create 1-bit art
+> [!IMPORTANT]
+> ART MUST BE 80x69
+> You can alter this in the code where you define your image so you can technically change this and make your art a different size, but this is the size I have found to be the best while keeping other information like battery etc
 
 > [!IMPORTANT]
 > WIP
