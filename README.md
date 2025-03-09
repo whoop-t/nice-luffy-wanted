@@ -3,9 +3,7 @@
 > [!IMPORTANT]
 > WIP
 
-## Clone the repo into your own folder
-
-1. Clone the base repo or fork the repo
+## Fork or clone the repo
 
 ### Fork
 
@@ -135,4 +133,43 @@ Once you have done all the changes you want, push the code to your remote github
 git add .
 git commit -m "Your commit message"
 git push
+```
+
+Then you just need to adjust your ZMK config to use the module
+
+
+Add remote to `west.yaml`
+```yaml
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: your-github-user #new entry
+      url-base: https://github.com/your-github-user #new entry
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    - name: your-repo-name #new entry
+      remote: your-github-user #new entry
+      revision: main #new entry
+  self:
+    path: config
+```
+
+Add this module to `build.yaml`(this is for corne, but change for your keyboard if needed)
+```yaml
+include:
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter your_repo_name #update entry
+  - board: nice_nano_v2
+    shield: corne_right nice_view_adapter your_repo_name #update entry
+```
+
+Also make sure to enable the custom status screen in your ZMK configuration, this would be your keyboards .conf file in the config directory:
+
+```
+CONFIG_ZMK_DISPLAY=y
+CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM=y
 ```
