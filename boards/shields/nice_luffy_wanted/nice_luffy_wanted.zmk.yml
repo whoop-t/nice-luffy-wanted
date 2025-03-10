@@ -1,6 +1,6 @@
 file_format: "1"
-id: nice-shield-base
-name: nice!view_shield_base
+id: nice-luffy-wanted
+name: nice!view_luffy_wanted
 type: shield
 url: https://nicekeyboards.com/nice-view
 requires: [nice_view_header]
